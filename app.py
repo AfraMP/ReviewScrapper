@@ -65,7 +65,7 @@ def index():
                 reviews.append(mydict) #  appending the comments to the review list
             return render_template('results.html', reviews=reviews) # showing the review to the user
         except Exception as e:
-            # print(e)
+            print(e)
             return 'something is wrong'
             #return render_template('results.html')
     else:
