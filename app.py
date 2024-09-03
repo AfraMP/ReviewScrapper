@@ -24,6 +24,7 @@ def index():
         try:
             flipkart_url = "https://www.flipkart.com/search?q=" + searchString # preparing the URL to search the product on flipkart
             uClient = uReq(flipkart_url) # requesting the webpage from the internet
+            print('read')
             flipkartPage = uClient.read() # reading the webpage
             uClient.close() # closing the connection to the web server
             flipkart_html = bs(flipkartPage, "html.parser") # parsing the webpage as HTML
